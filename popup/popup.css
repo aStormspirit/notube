@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 14px/1.4 system-ui, -apple-system, sans-serif;
+  color: #f1f1f1;
+  background: #1f1f1f;
+}
+
+main {
+  width: 280px;
+  padding: 16px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.time-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.time-row label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+input[type="time"] {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #3f3f3f;
+  border-radius: 6px;
+  background: #2a2a2a;
+  color: #f1f1f1;
+}
+
+.status {
+  margin-bottom: 12px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #2a2a2a;
+  font-size: 13px;
+}
+
+.status.active {
+  background: #3b1f1f;
+  color: #ffb4b4;
+}
+
+.status.inactive {
+  background: #1f3b2a;
+  color: #b4ffca;
+}
+
+button {
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #ff0000;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #cc0000;
+}
+
+a {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: #aaa;
+  font-size: 12px;
+}

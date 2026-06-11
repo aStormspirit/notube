@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoTube</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <h1>NoTube</h1>
+
+      <label class="row">
+        <input type="checkbox" id="enabled" />
+        <span>Enabled</span>
+      </label>
+
+      <div class="status" id="status"></div>
+
+      <div class="time-row">
+        <label>
+          From
+          <input type="time" id="startTime" />
+        </label>
+        <label>
+          To
+          <input type="time" id="endTime" />
+        </label>
+      </div>
+
+      <label class="row">
+        <input type="checkbox" id="showMessage" />
+        <span>Show notification</span>
+      </label>
+
+      <button id="save">Save</button>
+      <a href="#" id="openOptions">All settings</a>
+    </main>
+    <script src="../browser-polyfill.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

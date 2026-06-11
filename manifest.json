@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "NoTube",
+  "version": "1.0.0",
+  "description": "Blocks YouTube videos on the home page at specified times",
+  "permissions": ["storage"],
+  "host_permissions": ["*://www.youtube.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["browser-polyfill.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "NoTube"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "youtube-home-blocker@local",
+      "strict_min_version": "109.0"
+    }
+  }
+}

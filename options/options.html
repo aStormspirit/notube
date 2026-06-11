@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings — NoTube</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <h1>NoTube</h1>
+      <p class="subtitle">
+        Hides recommended videos on the YouTube home page during a scheduled time period.
+      </p>
+
+      <section>
+        <label class="row">
+          <input type="checkbox" id="enabled" />
+          <span>Enable blocking</span>
+        </label>
+      </section>
+
+      <section>
+        <h2>Blocking schedule</h2>
+        <div class="time-row">
+          <label>
+            Start
+            <input type="time" id="startTime" required />
+          </label>
+          <label>
+            End
+            <input type="time" id="endTime" required />
+          </label>
+        </div>
+        <p class="hint">
+          If the end time is earlier than the start time (e.g. 22:00–08:00), blocking spans midnight.
+        </p>
+      </section>
+
+      <section>
+        <label class="row">
+          <input type="checkbox" id="showMessage" />
+          <span>Show on-page notification</span>
+        </label>
+      </section>
+
+      <div class="actions">
+        <button id="save">Save</button>
+        <span id="saved" hidden>Saved</span>
+      </div>
+    </main>
+    <script src="../browser-polyfill.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>

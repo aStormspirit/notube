@@ -1,0 +1,19 @@
+.yt-home-blocker-hidden {
+  display: none !important;
+}
+
+#yt-home-blocker-message {
+  position: fixed;
+  top: 72px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  background: #1f1f1f;
+  color: #f1f1f1;
+  border: 1px solid #3f3f3f;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font: 14px/1.4 system-ui, -apple-system, sans-serif;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
