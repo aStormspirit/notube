@@ -1,19 +1,52 @@
-.yt-home-blocker-hidden {
+/* Hide the whole home feed shell — not just cards */
+html.yt-home-blocker-active ytd-browse[page-subtype="home"] #primary,
+html.yt-home-blocker-active ytd-browse[page-subtype="home"] ytd-rich-grid-renderer,
+html.yt-home-blocker-active ytd-browse[page-subtype="home"] ytd-two-column-browse-results-renderer {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+html.yt-home-blocker-active ytd-rich-item-renderer,
+html.yt-home-blocker-active ytd-video-renderer,
+html.yt-home-blocker-active ytd-grid-video-renderer,
+html.yt-home-blocker-active ytd-reel-item-renderer,
+html.yt-home-blocker-active ytd-shorts-lockup-view-model-v2,
+html.yt-home-blocker-active ytm-rich-item-renderer,
+html.yt-home-blocker-active ytm-video-with-context-renderer,
+html.yt-home-blocker-active ytd-rich-section-renderer,
+html.yt-home-blocker-active ytd-rich-shelf-renderer,
+html.yt-home-blocker-active ytd-continuation-item-renderer,
+html.yt-home-blocker-active ytd-feed-nudge-renderer,
+html.yt-home-blocker-active ytd-banner-promo-renderer {
+  display: none !important;
+}
+
+/* Spinners / skeletons while YT thinks it's loading */
+html.yt-home-blocker-active tp-yt-paper-spinner-lite,
+html.yt-home-blocker-active tp-yt-paper-spinner,
+html.yt-home-blocker-active #spinner-container,
+html.yt-home-blocker-active #spinner,
+html.yt-home-blocker-active ytd-browse[page-subtype="home"] [role="progressbar"],
+html.yt-home-blocker-active ytd-browse[page-subtype="home"] .skeleton-bg-color,
+html.yt-home-blocker-active ytd-browse[page-subtype="home"] ytd-thumbnail[is-loading],
+html.yt-home-blocker-active ytd-ghost-grid-renderer {
   display: none !important;
 }
 
 #yt-home-blocker-message {
   position: fixed;
-  top: 72px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   z-index: 9999;
+  max-width: min(420px, calc(100vw - 48px));
   background: #1f1f1f;
   color: #f1f1f1;
   border: 1px solid #3f3f3f;
-  border-radius: 8px;
-  padding: 12px 20px;
-  font: 14px/1.4 system-ui, -apple-system, sans-serif;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  border-radius: 12px;
+  padding: 20px 24px;
+  font: 15px/1.45 system-ui, -apple-system, sans-serif;
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
   pointer-events: none;
 }
